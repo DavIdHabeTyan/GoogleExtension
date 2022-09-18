@@ -1,17 +1,18 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "My first chrome extension,",
   "description": "Add text Welcome",
   "version": "1.0",
   "icons": {
-    "128": "./jpg/128.png"
+    "128": "./png/128.png"
   },
 
 
   "content_scripts": [{
     "matches": ["https://example.com/*"],
 
-    "js": ["content.js"],
+    "js": ["./src/content.js"],
+    "css": ["style.css"],
     "run_at": "document_end"
   }]
 }
